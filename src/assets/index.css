@@ -1,0 +1,275 @@
+.container {
+    text-align: center;
+    margin: 0 auto;
+    /* 居中对齐 */
+    width: 100%;
+    /* 默认为全宽 */
+}
+
+.header {
+    font-size: 1.5em;
+    /* 默认字体大小 */
+    white-space: nowrap;
+    /* 防止文本换行 */
+    overflow: hidden;
+    /* 隐藏溢出的内容 */
+    text-overflow: ellipsis;
+    /* 溢出时显示省略号 */
+    background-color: #48d1ae;
+    /* 新的背景颜色 */
+    color: white;
+    /* 白色文字 */
+    padding: 0.5em 1em;
+    /* 内边距 */
+    display: block;
+    /* 使背景颜色覆盖整个容器宽度 */
+    box-sizing: border-box;
+    /* 确保padding不会增加元素的实际宽度 */
+    width: 100%;
+    /* 宽度改为100% */
+    margin: 0 auto;
+    /* 居中对齐 */
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1em;
+    /* 去掉上下间距 */
+    width: 95%;
+    /* 宽度改为95% */
+    margin-left: auto;
+    /* 居中对齐 */
+    margin-right: auto;
+    /* 居中对齐 */
+}
+
+/* 移动端默认样式 */
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        /* 移动端全宽 */
+    }
+
+    .title {
+        font-size: 1.2em;
+        /* 字体大小 */
+    }
+
+    .button-container {
+        width: 100%;
+    }
+}
+
+/* 电脑端样式 */
+@media (min-width: 769px) {
+    .container {
+        width: 50%;
+        /* PC端50% 宽度 */
+    }
+
+    .button-container {
+        width: 50%;
+    }
+}
+
+.option {
+    flex: 1;
+    text-align: center;
+    padding: 0.5em 0;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+}
+
+.option.active {
+    background-color: #48d1ae;
+    color: white;
+}
+
+.sign-in-list {
+    margin-top: 0;
+    /* 去掉与上方间距 */
+    width: 95%;
+    /* 宽度改为95% */
+    margin-left: auto;
+    /* 居中对齐 */
+    margin-right: auto;
+    /* 居中对齐 */
+    padding: 0;
+    /* 内边距 */
+    background-color: #f9f9f9;
+    /* 背景颜色 */
+    border: 1px solid #ddd;
+    /* 边框 */
+    box-sizing: border-box;
+    /* 确保padding不会增加元素的实际宽度 */
+    height: 30vh;
+    /* 固定高度为视口高度的35% */
+    overflow-y: auto;
+    /* 如果内容超出则可以滚动 */
+}
+
+.sign-item {
+    display: flex;
+    align-items: center;
+    width: 75%;
+    /* 宽度为列表宽度的70% */
+    height: 45%;
+    /* 高度为列表高度的45% */
+    margin: 2% auto 1% auto;
+    /* 上下间距为列表高度的5% */
+    background-color: white;
+    /* 方框背景颜色 */
+    border: 1px solid #ddd;
+    /* 方框边框 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* 方框阴影 */
+    padding: 0.5em;
+    /* 内边距 */
+    box-sizing: border-box;
+    /* 确保padding不会增加元素的实际宽度 */
+}
+
+.cover-image {
+    width: 50px;
+    /* 图片宽度 */
+    height: 50px;
+    /* 图片高度 */
+    object-fit: cover;
+    /* 保持图片比例并填充 */
+    margin-left: 1em;
+    /* 使图片稍微向右移动 */
+    margin-right: 1em;
+    /* 图片和信息之间的间距 */
+}
+
+.sign-info {
+    flex: 1;
+}
+
+.sign-info h3 {
+    margin: 0;
+}
+
+.sign-info div {
+    display: block;
+}
+
+.sign-info div p {
+    margin: 0.3em 0;
+    font-size: 0.8em;
+    /* 减小段落字体大小 */
+}
+
+.status-ok,
+.status-not-ok {
+    display: inline-block;
+    /* 使元素根据内容自适应宽度 */
+    white-space: nowrap;
+    /* 防止文本换行 */
+    padding: 0.2em 0.5em;
+    border-radius: 0.25em;
+}
+
+.status-ok {
+    background-color: green;
+    color: white;
+}
+
+.status-not-ok {
+    background-color: red;
+    color: white;
+}
+
+/* 根据签到类型设置不同的样式 */
+.category-qr,
+.category-default {
+    display: inline-block;
+    /* 使元素根据内容自适应宽度 */
+    white-space: nowrap;
+    /* 防止文本换行 */
+    padding: 0.2em 0.5em;
+    border-radius: 0.25em;
+}
+
+.category-qr {
+    background-color: orange;
+    color: white;
+}
+
+.category-default {
+    background-color: gray;
+    color: white;
+}
+
+
+.toggle-button {
+    margin: 0 5% 0 5%;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.toggle-button.running {
+    background-color: red;
+    color: white;
+}
+
+.toggle-button:not(.running) {
+    background-color: green;
+    color: white;
+}
+
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 10vh;
+    /* 限制高度 */
+    margin: 0;
+    /* 去掉外边距 */
+}
+
+.info-container h2 {
+    margin: 0;
+    /* 去掉默认的段落外边距 */
+    line-height: 1.2;
+    /* 控制行高 */
+    transition: margin 0.2s;
+    font-size: 3vh;
+    /* 添加过渡效果 */
+}
+
+.info-container h2+h2 {
+    margin-top: 0.5rem;
+    /* 控制行间距，适当调整 */
+}
+.button-container {
+    position: fixed;
+    bottom: 0;
+    height: 8vh;
+    /* 高度为视窗高度的10% */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    border-top: 1px solid #ddd;
+}
+
+
+
+
+
+
+
+
+
+
+
+

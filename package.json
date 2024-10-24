@@ -1,0 +1,26 @@
+{
+  "name": "teachermate-sign-vue",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/cli": "^6.1.2",
+    "@capacitor/core": "^6.1.2",
+    "axios": "^1.7.7",
+    "node-fetch": "^3.3.2",
+    "qrcode.vue": "^3.5.1",
+    "vant": "^4.9.8",
+    "vue": "^3.4.21",
+    "vue-toastification": "^2.0.0-rc.5"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.0"
+  }
+}
